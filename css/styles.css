@@ -1,0 +1,3100 @@
+@keyframes form-appear {
+    0% {
+        transform: translateY(2000px)
+    }
+    30% {
+        transform: translateY(100px)
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes pop-up-appear {
+    0% {
+        transform: translateY(-2000px)
+    }
+    30% {
+        transform: translateY(100px)
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes pop-up-appear-before {
+    0% {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes pop-up-appear-after {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+.boldText {
+    font-weight: 700
+}
+
+.italicText {
+    font-style: oblique
+}
+
+body {
+    margin: 0 !important;
+    background-color: #fff
+}
+
+h1, h2, h3, h4, h5, h6, ol, p, ul {
+    margin: 0
+}
+
+a, li {
+    text-decoration: none
+}
+
+a {
+    cursor: pointer;
+    color: inherit
+}
+
+.new_price_cur, .new_price_val {
+    padding: 0
+}
+
+ol.list-1, ul.list-1 {
+    list-style: none;
+    margin: 0
+}
+
+ol.list-1 {
+    counter-reset: section
+}
+
+ol.list-1 li {
+    counter-increment: section
+}
+
+ol.list-1 li::before {
+    content: counters(section, ".") ". ";
+    margin-right: 5px;
+    margin-left: -24px;
+    text-align: right
+}
+
+.list-0 {
+    display: inline-block;
+    margin-left: 24px
+}
+
+ul.list-1 li::before {
+    content: "â€¢";
+    margin-right: 14px;
+    margin-left: -22px;
+    text-align: right
+}
+
+ul.list-1 ol, ul.list-2 div ol {
+    counter-reset: listStyle
+}
+
+ul.list-1 ol li, ul.list-2 div ol li {
+    counter-increment: listStyle
+}
+
+ul.list-1 ol li::before, ul.list-2 div ol li::before {
+    content: counter(listStyle, lower-alpha)
+}
+
+ol li.listCircle, ul li.listCircle {
+    list-style-type: none
+}
+
+ol li.listCircle::before, ul li.listCircle::before {
+    content: "âˆ˜";
+    margin-right: 14px;
+    margin-left: -22px;
+    text-align: right
+}
+
+.imgBox__wrapper {
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    max-width: 100px
+}
+
+.imgBox__wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+.ctContainer {
+    margin: 0 auto;
+    width: 100%;
+    background: 0 0
+}
+
+.ctContent {
+    max-width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box
+}
+
+.ctContent, .ctContentFluid {
+    width: 100%;
+    background: #fff
+}
+
+.coloredText {
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #fff
+}
+
+.coloredText__container {
+    margin: 0;
+    border: 1px solid #ff7250;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #ffeca6
+}
+
+.coloredText__title {
+    padding: 0 0 0 10px;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    word-break: break-word
+}
+
+.coloredText ul {
+    padding: 10px 10px 0
+}
+
+.coloredText li, .coloredText__listSub {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    word-break: break-word
+}
+
+.coloredText li {
+    padding: 10px 0;
+    font-weight: 700
+}
+
+.coloredText__listSub {
+    font-weight: 400
+}
+
+.menHealthCom {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.menHealthCom__wrapper {
+    display: flex;
+    padding: 10px 55px 30px;
+    width: 100%
+}
+
+.menHealthCom__avatarWrapper {
+    margin-right: 21px;
+    width: 100%;
+    height: 78px;
+    max-width: 78px
+}
+
+.menHealthCom__avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.menHealthCom__info {
+    width: 100%
+}
+
+.menHealthCom__comment, .menHealthCom__name {
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 140%;
+    word-break: break-word;
+    color: #000
+}
+
+.menHealthCom__comment {
+    font-weight: 400
+}
+
+.menHealthCom:first-child {
+    padding-top: 0
+}
+
+.menHealthCom:last-child {
+    padding-bottom: 70px
+}
+
+.goToForm {
+    display: none;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background: red
+}
+
+.goToFormShow {
+    display: block !important
+}
+
+.ctContentFluid--red {
+    background: red
+}
+
+.iti {
+    position: relative;
+    width: 100%
+}
+
+.iti * {
+    box-sizing: border-box
+}
+
+.iti__hide {
+    display: none
+}
+
+.iti__v-hide {
+    visibility: hidden
+}
+
+.iti input, .iti input[type=tel], .iti input[type=text] {
+    position: relative;
+    z-index: 0;
+    padding-right: 36px
+}
+
+.iti__flag-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 1px
+}
+
+.iti__selected-flag {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 6px 0 8px
+}
+
+.iti__arrow {
+    margin-left: 6px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555
+}
+
+[dir=rtl] .iti__arrow {
+    margin-right: 6px;
+    margin-left: 0
+}
+
+.iti__arrow--up {
+    border-top: none;
+    border-bottom: 4px solid #555
+}
+
+.iti__country-list {
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 -1px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    max-height: 200px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
+}
+
+.iti__country-list--dropup {
+    bottom: 100%;
+    margin-bottom: -1px
+}
+
+.iti__flag-box {
+    display: inline-block;
+    width: 20px
+}
+
+.iti__divider {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc
+}
+
+.iti__country {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    outline: 0
+}
+
+.iti__dial-code {
+    color: #999
+}
+
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag, .iti__country.iti__highlight {
+    background-color: rgba(0, 0, 0, .05)
+}
+
+.iti__country-name, .iti__flag-box {
+    margin-right: 6px;
+    font-family: sans-serif;
+    font-size: 15px
+}
+
+[dir=rtl] .iti__country-name, [dir=rtl] .iti__flag-box {
+    margin-right: 0;
+    margin-left: 6px
+}
+
+.iti--allow-dropdown input, .iti--allow-dropdown input[type=tel], .iti--allow-dropdown input[type=text], .iti--separate-dial-code input, .iti--separate-dial-code input[type=tel], .iti--separate-dial-code input[type=text] {
+    padding-right: 6px;
+    padding-left: 52px;
+    margin-left: 0
+}
+
+[dir=rtl] .iti--allow-dropdown input, [dir=rtl] .iti--allow-dropdown input[type=tel], [dir=rtl] .iti--allow-dropdown input[type=text], [dir=rtl] .iti--separate-dial-code input, [dir=rtl] .iti--separate-dial-code input[type=tel], [dir=rtl] .iti--separate-dial-code input[type=text] {
+    padding-right: 52px;
+    padding-left: 6px;
+    margin-right: 0
+}
+
+.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+    right: auto;
+    left: 0
+}
+
+[dir=rtl] .iti--allow-dropdown .iti__flag-container, [dir=rtl] .iti--separate-dial-code .iti__flag-container {
+    right: 0;
+    left: auto
+}
+
+.iti--allow-dropdown .iti__flag-container:hover {
+    cursor: pointer
+}
+
+.iti--allow-dropdown input[disabled] + .iti__flag-container:hover, .iti--allow-dropdown input[readonly] + .iti__flag-container:hover {
+    cursor: default
+}
+
+.iti--allow-dropdown input[disabled] + .iti__flag-container:hover .iti__selected-flag, .iti--allow-dropdown input[readonly] + .iti__flag-container:hover .iti__selected-flag {
+    background-color: transparent
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+    background-color: rgba(0, 0, 0, .05)
+}
+
+.iti--separate-dial-code.iti--show-flags .iti__selected-dial-code {
+    margin-left: 6px
+}
+
+.iti--container {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    z-index: 1060;
+    padding: 1px
+}
+
+.iti--container:hover {
+    cursor: pointer
+}
+
+.iti-mobile .iti--container {
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    position: fixed
+}
+
+.iti-mobile .iti__country-list {
+    max-height: 100%;
+    width: 100%
+}
+
+.iti-mobile .iti__country {
+    padding: 10px;
+    line-height: 1.5em
+}
+
+.iti__flag {
+    width: 20px;
+    height: 15px;
+    box-shadow: 0 0 1px 0 #888;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-color: #dbdbdb;
+    background-position: 20px 0
+}
+
+.iti__flag.iti__be {
+    width: 18px
+}
+
+.iti__flag.iti__ch {
+    width: 15px
+}
+
+.iti__flag.iti__mc {
+    width: 19px
+}
+
+.iti__flag.iti__ne {
+    width: 18px
+}
+
+.iti__flag.iti__np {
+    width: 13px
+}
+
+.iti__flag.iti__va {
+    width: 15px
+}
+
+.iti__flag.iti__ac {
+    height: 10px;
+    background-position: 0 0
+}
+
+.iti__flag.iti__ad {
+    height: 14px;
+    background-position: -22px 0
+}
+
+.iti__flag.iti__ae {
+    height: 10px;
+    background-position: -44px 0
+}
+
+.iti__flag.iti__af {
+    height: 14px;
+    background-position: -66px 0
+}
+
+.iti__flag.iti__ag {
+    height: 14px;
+    background-position: -88px 0
+}
+
+.iti__flag.iti__ai {
+    height: 10px;
+    background-position: -110px 0
+}
+
+.iti__flag.iti__al {
+    height: 15px;
+    background-position: -132px 0
+}
+
+.iti__flag.iti__am {
+    height: 10px;
+    background-position: -154px 0
+}
+
+.iti__flag.iti__ao {
+    height: 14px;
+    background-position: -176px 0
+}
+
+.iti__flag.iti__aq {
+    height: 14px;
+    background-position: -198px 0
+}
+
+.iti__flag.iti__ar {
+    height: 13px;
+    background-position: -220px 0
+}
+
+.iti__flag.iti__as {
+    height: 10px;
+    background-position: -242px 0
+}
+
+.iti__flag.iti__at {
+    height: 14px;
+    background-position: -264px 0
+}
+
+.iti__flag.iti__au {
+    height: 10px;
+    background-position: -286px 0
+}
+
+.iti__flag.iti__aw {
+    height: 14px;
+    background-position: -308px 0
+}
+
+.iti__flag.iti__ax {
+    height: 13px;
+    background-position: -330px 0
+}
+
+.iti__flag.iti__az {
+    height: 10px;
+    background-position: -352px 0
+}
+
+.iti__flag.iti__ba {
+    height: 10px;
+    background-position: -374px 0
+}
+
+.iti__flag.iti__bb {
+    height: 14px;
+    background-position: -396px 0
+}
+
+.iti__flag.iti__bd {
+    height: 12px;
+    background-position: -418px 0
+}
+
+.iti__flag.iti__be {
+    height: 15px;
+    background-position: -440px 0
+}
+
+.iti__flag.iti__bf {
+    height: 14px;
+    background-position: -460px 0
+}
+
+.iti__flag.iti__bg {
+    height: 12px;
+    background-position: -482px 0
+}
+
+.iti__flag.iti__bh {
+    height: 12px;
+    background-position: -504px 0
+}
+
+.iti__flag.iti__bi {
+    height: 12px;
+    background-position: -526px 0
+}
+
+.iti__flag.iti__bj {
+    height: 14px;
+    background-position: -548px 0
+}
+
+.iti__flag.iti__bl {
+    height: 14px;
+    background-position: -570px 0
+}
+
+.iti__flag.iti__bm {
+    height: 10px;
+    background-position: -592px 0
+}
+
+.iti__flag.iti__bn {
+    height: 10px;
+    background-position: -614px 0
+}
+
+.iti__flag.iti__bo {
+    height: 14px;
+    background-position: -636px 0
+}
+
+.iti__flag.iti__bq {
+    height: 14px;
+    background-position: -658px 0
+}
+
+.iti__flag.iti__br {
+    height: 14px;
+    background-position: -680px 0
+}
+
+.iti__flag.iti__bs {
+    height: 10px;
+    background-position: -702px 0
+}
+
+.iti__flag.iti__bt {
+    height: 14px;
+    background-position: -724px 0
+}
+
+.iti__flag.iti__bv {
+    height: 15px;
+    background-position: -746px 0
+}
+
+.iti__flag.iti__bw {
+    height: 14px;
+    background-position: -768px 0
+}
+
+.iti__flag.iti__by {
+    height: 10px;
+    background-position: -790px 0
+}
+
+.iti__flag.iti__bz {
+    height: 14px;
+    background-position: -812px 0
+}
+
+.iti__flag.iti__ca {
+    height: 10px;
+    background-position: -834px 0
+}
+
+.iti__flag.iti__cc {
+    height: 10px;
+    background-position: -856px 0
+}
+
+.iti__flag.iti__cd {
+    height: 15px;
+    background-position: -878px 0
+}
+
+.iti__flag.iti__cf {
+    height: 14px;
+    background-position: -900px 0
+}
+
+.iti__flag.iti__cg {
+    height: 14px;
+    background-position: -922px 0
+}
+
+.iti__flag.iti__ch {
+    height: 15px;
+    background-position: -944px 0
+}
+
+.iti__flag.iti__ci {
+    height: 14px;
+    background-position: -961px 0
+}
+
+.iti__flag.iti__ck {
+    height: 10px;
+    background-position: -983px 0
+}
+
+.iti__flag.iti__cl {
+    height: 14px;
+    background-position: -1005px 0
+}
+
+.iti__flag.iti__cm {
+    height: 14px;
+    background-position: -1027px 0
+}
+
+.iti__flag.iti__cn {
+    height: 14px;
+    background-position: -1049px 0
+}
+
+.iti__flag.iti__co {
+    height: 14px;
+    background-position: -1071px 0
+}
+
+.iti__flag.iti__cp {
+    height: 14px;
+    background-position: -1093px 0
+}
+
+.iti__flag.iti__cr {
+    height: 12px;
+    background-position: -1115px 0
+}
+
+.iti__flag.iti__cu {
+    height: 10px;
+    background-position: -1137px 0
+}
+
+.iti__flag.iti__cv {
+    height: 12px;
+    background-position: -1159px 0
+}
+
+.iti__flag.iti__cw {
+    height: 14px;
+    background-position: -1181px 0
+}
+
+.iti__flag.iti__cx {
+    height: 10px;
+    background-position: -1203px 0
+}
+
+.iti__flag.iti__cy {
+    height: 14px;
+    background-position: -1225px 0
+}
+
+.iti__flag.iti__cz {
+    height: 14px;
+    background-position: -1247px 0
+}
+
+.iti__flag.iti__de {
+    height: 12px;
+    background-position: -1269px 0
+}
+
+.iti__flag.iti__dg {
+    height: 10px;
+    background-position: -1291px 0
+}
+
+.iti__flag.iti__dj {
+    height: 14px;
+    background-position: -1313px 0
+}
+
+.iti__flag.iti__dk {
+    height: 15px;
+    background-position: -1335px 0
+}
+
+.iti__flag.iti__dm {
+    height: 10px;
+    background-position: -1357px 0
+}
+
+.iti__flag.iti__do {
+    height: 14px;
+    background-position: -1379px 0
+}
+
+.iti__flag.iti__dz {
+    height: 14px;
+    background-position: -1401px 0
+}
+
+.iti__flag.iti__ea {
+    height: 14px;
+    background-position: -1423px 0
+}
+
+.iti__flag.iti__ec {
+    height: 14px;
+    background-position: -1445px 0
+}
+
+.iti__flag.iti__ee {
+    height: 13px;
+    background-position: -1467px 0
+}
+
+.iti__flag.iti__eg {
+    height: 14px;
+    background-position: -1489px 0
+}
+
+.iti__flag.iti__eh {
+    height: 10px;
+    background-position: -1511px 0
+}
+
+.iti__flag.iti__er {
+    height: 10px;
+    background-position: -1533px 0
+}
+
+.iti__flag.iti__es {
+    height: 14px;
+    background-position: -1555px 0
+}
+
+.iti__flag.iti__et {
+    height: 10px;
+    background-position: -1577px 0
+}
+
+.iti__flag.iti__eu {
+    height: 14px;
+    background-position: -1599px 0
+}
+
+.iti__flag.iti__fi {
+    height: 12px;
+    background-position: -1621px 0
+}
+
+.iti__flag.iti__fj {
+    height: 10px;
+    background-position: -1643px 0
+}
+
+.iti__flag.iti__fk {
+    height: 10px;
+    background-position: -1665px 0
+}
+
+.iti__flag.iti__fm {
+    height: 11px;
+    background-position: -1687px 0
+}
+
+.iti__flag.iti__fo {
+    height: 15px;
+    background-position: -1709px 0
+}
+
+.iti__flag.iti__fr {
+    height: 14px;
+    background-position: -1731px 0
+}
+
+.iti__flag.iti__ga {
+    height: 15px;
+    background-position: -1753px 0
+}
+
+.iti__flag.iti__gb {
+    height: 10px;
+    background-position: -1775px 0
+}
+
+.iti__flag.iti__gd {
+    height: 12px;
+    background-position: -1797px 0
+}
+
+.iti__flag.iti__ge {
+    height: 14px;
+    background-position: -1819px 0
+}
+
+.iti__flag.iti__gf {
+    height: 14px;
+    background-position: -1841px 0
+}
+
+.iti__flag.iti__gg {
+    height: 14px;
+    background-position: -1863px 0
+}
+
+.iti__flag.iti__gh {
+    height: 14px;
+    background-position: -1885px 0
+}
+
+.iti__flag.iti__gi {
+    height: 10px;
+    background-position: -1907px 0
+}
+
+.iti__flag.iti__gl {
+    height: 14px;
+    background-position: -1929px 0
+}
+
+.iti__flag.iti__gm {
+    height: 14px;
+    background-position: -1951px 0
+}
+
+.iti__flag.iti__gn {
+    height: 14px;
+    background-position: -1973px 0
+}
+
+.iti__flag.iti__gp {
+    height: 14px;
+    background-position: -1995px 0
+}
+
+.iti__flag.iti__gq {
+    height: 14px;
+    background-position: -2017px 0
+}
+
+.iti__flag.iti__gr {
+    height: 14px;
+    background-position: -2039px 0
+}
+
+.iti__flag.iti__gs {
+    height: 10px;
+    background-position: -2061px 0
+}
+
+.iti__flag.iti__gt {
+    height: 13px;
+    background-position: -2083px 0
+}
+
+.iti__flag.iti__gu {
+    height: 11px;
+    background-position: -2105px 0
+}
+
+.iti__flag.iti__gw {
+    height: 10px;
+    background-position: -2127px 0
+}
+
+.iti__flag.iti__gy {
+    height: 12px;
+    background-position: -2149px 0
+}
+
+.iti__flag.iti__hk {
+    height: 14px;
+    background-position: -2171px 0
+}
+
+.iti__flag.iti__hm {
+    height: 10px;
+    background-position: -2193px 0
+}
+
+.iti__flag.iti__hn {
+    height: 10px;
+    background-position: -2215px 0
+}
+
+.iti__flag.iti__hr {
+    height: 10px;
+    background-position: -2237px 0
+}
+
+.iti__flag.iti__ht {
+    height: 12px;
+    background-position: -2259px 0
+}
+
+.iti__flag.iti__hu {
+    height: 10px;
+    background-position: -2281px 0
+}
+
+.iti__flag.iti__ic {
+    height: 14px;
+    background-position: -2303px 0
+}
+
+.iti__flag.iti__id {
+    height: 14px;
+    background-position: -2325px 0
+}
+
+.iti__flag.iti__ie {
+    height: 10px;
+    background-position: -2347px 0
+}
+
+.iti__flag.iti__il {
+    height: 15px;
+    background-position: -2369px 0
+}
+
+.iti__flag.iti__im {
+    height: 10px;
+    background-position: -2391px 0
+}
+
+.iti__flag.iti__in {
+    height: 14px;
+    background-position: -2413px 0
+}
+
+.iti__flag.iti__io {
+    height: 10px;
+    background-position: -2435px 0
+}
+
+.iti__flag.iti__iq {
+    height: 14px;
+    background-position: -2457px 0
+}
+
+.iti__flag.iti__ir {
+    height: 12px;
+    background-position: -2479px 0
+}
+
+.iti__flag.iti__is {
+    height: 15px;
+    background-position: -2501px 0
+}
+
+.iti__flag.iti__it {
+    height: 14px;
+    background-position: -2523px 0
+}
+
+.iti__flag.iti__je {
+    height: 12px;
+    background-position: -2545px 0
+}
+
+.iti__flag.iti__jm {
+    height: 10px;
+    background-position: -2567px 0
+}
+
+.iti__flag.iti__jo {
+    height: 10px;
+    background-position: -2589px 0
+}
+
+.iti__flag.iti__jp {
+    height: 14px;
+    background-position: -2611px 0
+}
+
+.iti__flag.iti__ke {
+    height: 14px;
+    background-position: -2633px 0
+}
+
+.iti__flag.iti__kg {
+    height: 12px;
+    background-position: -2655px 0
+}
+
+.iti__flag.iti__kh {
+    height: 13px;
+    background-position: -2677px 0
+}
+
+.iti__flag.iti__ki {
+    height: 10px;
+    background-position: -2699px 0
+}
+
+.iti__flag.iti__km {
+    height: 12px;
+    background-position: -2721px 0
+}
+
+.iti__flag.iti__kn {
+    height: 14px;
+    background-position: -2743px 0
+}
+
+.iti__flag.iti__kp {
+    height: 10px;
+    background-position: -2765px 0
+}
+
+.iti__flag.iti__kr {
+    height: 14px;
+    background-position: -2787px 0
+}
+
+.iti__flag.iti__kw {
+    height: 10px;
+    background-position: -2809px 0
+}
+
+.iti__flag.iti__ky {
+    height: 10px;
+    background-position: -2831px 0
+}
+
+.iti__flag.iti__kz {
+    height: 10px;
+    background-position: -2853px 0
+}
+
+.iti__flag.iti__la {
+    height: 14px;
+    background-position: -2875px 0
+}
+
+.iti__flag.iti__lb {
+    height: 14px;
+    background-position: -2897px 0
+}
+
+.iti__flag.iti__lc {
+    height: 10px;
+    background-position: -2919px 0
+}
+
+.iti__flag.iti__li {
+    height: 12px;
+    background-position: -2941px 0
+}
+
+.iti__flag.iti__lk {
+    height: 10px;
+    background-position: -2963px 0
+}
+
+.iti__flag.iti__lr {
+    height: 11px;
+    background-position: -2985px 0
+}
+
+.iti__flag.iti__ls {
+    height: 14px;
+    background-position: -3007px 0
+}
+
+.iti__flag.iti__lt {
+    height: 12px;
+    background-position: -3029px 0
+}
+
+.iti__flag.iti__lu {
+    height: 12px;
+    background-position: -3051px 0
+}
+
+.iti__flag.iti__lv {
+    height: 10px;
+    background-position: -3073px 0
+}
+
+.iti__flag.iti__ly {
+    height: 10px;
+    background-position: -3095px 0
+}
+
+.iti__flag.iti__ma {
+    height: 14px;
+    background-position: -3117px 0
+}
+
+.iti__flag.iti__mc {
+    height: 15px;
+    background-position: -3139px 0
+}
+
+.iti__flag.iti__md {
+    height: 10px;
+    background-position: -3160px 0
+}
+
+.iti__flag.iti__me {
+    height: 10px;
+    background-position: -3182px 0
+}
+
+.iti__flag.iti__mf {
+    height: 14px;
+    background-position: -3204px 0
+}
+
+.iti__flag.iti__mg {
+    height: 14px;
+    background-position: -3226px 0
+}
+
+.iti__flag.iti__mh {
+    height: 11px;
+    background-position: -3248px 0
+}
+
+.iti__flag.iti__mk {
+    height: 10px;
+    background-position: -3270px 0
+}
+
+.iti__flag.iti__ml {
+    height: 14px;
+    background-position: -3292px 0
+}
+
+.iti__flag.iti__mm {
+    height: 14px;
+    background-position: -3314px 0
+}
+
+.iti__flag.iti__mn {
+    height: 10px;
+    background-position: -3336px 0
+}
+
+.iti__flag.iti__mo {
+    height: 14px;
+    background-position: -3358px 0
+}
+
+.iti__flag.iti__mp {
+    height: 10px;
+    background-position: -3380px 0
+}
+
+.iti__flag.iti__mq {
+    height: 14px;
+    background-position: -3402px 0
+}
+
+.iti__flag.iti__mr {
+    height: 14px;
+    background-position: -3424px 0
+}
+
+.iti__flag.iti__ms {
+    height: 10px;
+    background-position: -3446px 0
+}
+
+.iti__flag.iti__mt {
+    height: 14px;
+    background-position: -3468px 0
+}
+
+.iti__flag.iti__mu {
+    height: 14px;
+    background-position: -3490px 0
+}
+
+.iti__flag.iti__mv {
+    height: 14px;
+    background-position: -3512px 0
+}
+
+.iti__flag.iti__mw {
+    height: 14px;
+    background-position: -3534px 0
+}
+
+.iti__flag.iti__mx {
+    height: 12px;
+    background-position: -3556px 0
+}
+
+.iti__flag.iti__my {
+    height: 10px;
+    background-position: -3578px 0
+}
+
+.iti__flag.iti__mz {
+    height: 14px;
+    background-position: -3600px 0
+}
+
+.iti__flag.iti__na {
+    height: 14px;
+    background-position: -3622px 0
+}
+
+.iti__flag.iti__nc {
+    height: 10px;
+    background-position: -3644px 0
+}
+
+.iti__flag.iti__ne {
+    height: 15px;
+    background-position: -3666px 0
+}
+
+.iti__flag.iti__nf {
+    height: 10px;
+    background-position: -3686px 0
+}
+
+.iti__flag.iti__ng {
+    height: 10px;
+    background-position: -3708px 0
+}
+
+.iti__flag.iti__ni {
+    height: 12px;
+    background-position: -3730px 0
+}
+
+.iti__flag.iti__nl {
+    height: 14px;
+    background-position: -3752px 0
+}
+
+.iti__flag.iti__no {
+    height: 15px;
+    background-position: -3774px 0
+}
+
+.iti__flag.iti__np {
+    height: 15px;
+    background-position: -3796px 0
+}
+
+.iti__flag.iti__nr {
+    height: 10px;
+    background-position: -3811px 0
+}
+
+.iti__flag.iti__nu {
+    height: 10px;
+    background-position: -3833px 0
+}
+
+.iti__flag.iti__nz {
+    height: 10px;
+    background-position: -3855px 0
+}
+
+.iti__flag.iti__om {
+    height: 10px;
+    background-position: -3877px 0
+}
+
+.iti__flag.iti__pa {
+    height: 14px;
+    background-position: -3899px 0
+}
+
+.iti__flag.iti__pe {
+    height: 14px;
+    background-position: -3921px 0
+}
+
+.iti__flag.iti__pf {
+    height: 14px;
+    background-position: -3943px 0
+}
+
+.iti__flag.iti__pg {
+    height: 15px;
+    background-position: -3965px 0
+}
+
+.iti__flag.iti__ph {
+    height: 10px;
+    background-position: -3987px 0
+}
+
+.iti__flag.iti__pk {
+    height: 14px;
+    background-position: -4009px 0
+}
+
+.iti__flag.iti__pl {
+    height: 13px;
+    background-position: -4031px 0
+}
+
+.iti__flag.iti__pm {
+    height: 14px;
+    background-position: -4053px 0
+}
+
+.iti__flag.iti__pn {
+    height: 10px;
+    background-position: -4075px 0
+}
+
+.iti__flag.iti__pr {
+    height: 14px;
+    background-position: -4097px 0
+}
+
+.iti__flag.iti__ps {
+    height: 10px;
+    background-position: -4119px 0
+}
+
+.iti__flag.iti__pt {
+    height: 14px;
+    background-position: -4141px 0
+}
+
+.iti__flag.iti__pw {
+    height: 13px;
+    background-position: -4163px 0
+}
+
+.iti__flag.iti__py {
+    height: 11px;
+    background-position: -4185px 0
+}
+
+.iti__flag.iti__qa {
+    height: 8px;
+    background-position: -4207px 0
+}
+
+.iti__flag.iti__re {
+    height: 14px;
+    background-position: -4229px 0
+}
+
+.iti__flag.iti__ro {
+    height: 14px;
+    background-position: -4251px 0
+}
+
+.iti__flag.iti__rs {
+    height: 14px;
+    background-position: -4273px 0
+}
+
+.iti__flag.iti__ru {
+    height: 14px;
+    background-position: -4295px 0
+}
+
+.iti__flag.iti__rw {
+    height: 14px;
+    background-position: -4317px 0
+}
+
+.iti__flag.iti__sa {
+    height: 14px;
+    background-position: -4339px 0
+}
+
+.iti__flag.iti__sb {
+    height: 10px;
+    background-position: -4361px 0
+}
+
+.iti__flag.iti__sc {
+    height: 10px;
+    background-position: -4383px 0
+}
+
+.iti__flag.iti__sd {
+    height: 10px;
+    background-position: -4405px 0
+}
+
+.iti__flag.iti__se {
+    height: 13px;
+    background-position: -4427px 0
+}
+
+.iti__flag.iti__sg {
+    height: 14px;
+    background-position: -4449px 0
+}
+
+.iti__flag.iti__sh {
+    height: 10px;
+    background-position: -4471px 0
+}
+
+.iti__flag.iti__si {
+    height: 10px;
+    background-position: -4493px 0
+}
+
+.iti__flag.iti__sj {
+    height: 15px;
+    background-position: -4515px 0
+}
+
+.iti__flag.iti__sk {
+    height: 14px;
+    background-position: -4537px 0
+}
+
+.iti__flag.iti__sl {
+    height: 14px;
+    background-position: -4559px 0
+}
+
+.iti__flag.iti__sm {
+    height: 15px;
+    background-position: -4581px 0
+}
+
+.iti__flag.iti__sn {
+    height: 14px;
+    background-position: -4603px 0
+}
+
+.iti__flag.iti__so {
+    height: 14px;
+    background-position: -4625px 0
+}
+
+.iti__flag.iti__sr {
+    height: 14px;
+    background-position: -4647px 0
+}
+
+.iti__flag.iti__ss {
+    height: 10px;
+    background-position: -4669px 0
+}
+
+.iti__flag.iti__st {
+    height: 10px;
+    background-position: -4691px 0
+}
+
+.iti__flag.iti__sv {
+    height: 12px;
+    background-position: -4713px 0
+}
+
+.iti__flag.iti__sx {
+    height: 14px;
+    background-position: -4735px 0
+}
+
+.iti__flag.iti__sy {
+    height: 14px;
+    background-position: -4757px 0
+}
+
+.iti__flag.iti__sz {
+    height: 14px;
+    background-position: -4779px 0
+}
+
+.iti__flag.iti__ta {
+    height: 10px;
+    background-position: -4801px 0
+}
+
+.iti__flag.iti__tc {
+    height: 10px;
+    background-position: -4823px 0
+}
+
+.iti__flag.iti__td {
+    height: 14px;
+    background-position: -4845px 0
+}
+
+.iti__flag.iti__tf {
+    height: 14px;
+    background-position: -4867px 0
+}
+
+.iti__flag.iti__tg {
+    height: 13px;
+    background-position: -4889px 0
+}
+
+.iti__flag.iti__th {
+    height: 14px;
+    background-position: -4911px 0
+}
+
+.iti__flag.iti__tj {
+    height: 10px;
+    background-position: -4933px 0
+}
+
+.iti__flag.iti__tk {
+    height: 10px;
+    background-position: -4955px 0
+}
+
+.iti__flag.iti__tl {
+    height: 10px;
+    background-position: -4977px 0
+}
+
+.iti__flag.iti__tm {
+    height: 14px;
+    background-position: -4999px 0
+}
+
+.iti__flag.iti__tn {
+    height: 14px;
+    background-position: -5021px 0
+}
+
+.iti__flag.iti__to {
+    height: 10px;
+    background-position: -5043px 0
+}
+
+.iti__flag.iti__tr {
+    height: 14px;
+    background-position: -5065px 0
+}
+
+.iti__flag.iti__tt {
+    height: 12px;
+    background-position: -5087px 0
+}
+
+.iti__flag.iti__tv {
+    height: 10px;
+    background-position: -5109px 0
+}
+
+.iti__flag.iti__tw {
+    height: 14px;
+    background-position: -5131px 0
+}
+
+.iti__flag.iti__tz {
+    height: 14px;
+    background-position: -5153px 0
+}
+
+.iti__flag.iti__ua {
+    height: 14px;
+    background-position: -5175px 0
+}
+
+.iti__flag.iti__ug {
+    height: 14px;
+    background-position: -5197px 0
+}
+
+.iti__flag.iti__um {
+    height: 11px;
+    background-position: -5219px 0
+}
+
+.iti__flag.iti__un {
+    height: 14px;
+    background-position: -5241px 0
+}
+
+.iti__flag.iti__us {
+    height: 11px;
+    background-position: -5263px 0
+}
+
+.iti__flag.iti__uy {
+    height: 14px;
+    background-position: -5285px 0
+}
+
+.iti__flag.iti__uz {
+    height: 10px;
+    background-position: -5307px 0
+}
+
+.iti__flag.iti__va {
+    height: 15px;
+    background-position: -5329px 0
+}
+
+.iti__flag.iti__vc {
+    height: 14px;
+    background-position: -5346px 0
+}
+
+.iti__flag.iti__ve {
+    height: 14px;
+    background-position: -5368px 0
+}
+
+.iti__flag.iti__vg {
+    height: 10px;
+    background-position: -5390px 0
+}
+
+.iti__flag.iti__vi {
+    height: 14px;
+    background-position: -5412px 0
+}
+
+.iti__flag.iti__vn {
+    height: 14px;
+    background-position: -5434px 0
+}
+
+.iti__flag.iti__vu {
+    height: 12px;
+    background-position: -5456px 0
+}
+
+.iti__flag.iti__wf {
+    height: 14px;
+    background-position: -5478px 0
+}
+
+.iti__flag.iti__ws {
+    height: 10px;
+    background-position: -5500px 0
+}
+
+.iti__flag.iti__xk {
+    height: 15px;
+    background-position: -5522px 0
+}
+
+.iti__flag.iti__ye {
+    height: 14px;
+    background-position: -5544px 0
+}
+
+.iti__flag.iti__yt {
+    height: 14px;
+    background-position: -5566px 0
+}
+
+.iti__flag.iti__za {
+    height: 14px;
+    background-position: -5588px 0
+}
+
+.iti__flag.iti__zm {
+    height: 14px;
+    background-position: -5610px 0
+}
+
+.iti__flag.iti__zw {
+    height: 10px;
+    background-position: -5632px 0
+}
+
+.iti__flag.iti__np {
+    background-color: transparent
+}
+
+.mensHealthAside {
+    float: right;
+    margin-left: auto;
+    width: 29%
+}
+
+.mensHealthAside__title {
+    margin: 0 0 24px;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #6d6057
+}
+
+.mensHealthAside__newsWrapper ul {
+    padding-left: 0
+}
+
+.mensHealthAside__newsWrapper ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px
+}
+
+.mensHealthAside__newsImageWrapper {
+    display: inline-block;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 280px
+}
+
+.mensHealthAside__newsImage {
+    width: 100%
+}
+
+.mensHealthAside__newsText {
+    margin: 15px 0 11px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center
+}
+
+.mensHealthContentImg {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.mensHealthContentImg__imgItem {
+    width: 100%;
+    height: 100%;
+    box-shadow: #888 0 0 10px;
+    object-fit: cover
+}
+
+.mensHealthContentImg__imgWrapper {
+    margin: 0 auto;
+    padding: 15px;
+    width: 100%;
+    max-width: 700px
+}
+
+.mensHealthDoors {
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.mensHealthDoors__subWrapper {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #3a4752;
+    margin-bottom: 20px;
+}
+
+.mensHealthDoors__subTitle, .mensHealthDoors__supTitle {
+    font-family: sans-serif;
+    font-weight: 700;
+    text-align: center
+}
+
+.mensHealthDoors__supTitle {
+    padding: 0 0 20px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000
+}
+
+.mensHealthDoors__subTitle {
+    font-size: 22px;
+    color: #fff
+}
+
+.mensHealthDoors__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%
+}
+
+.mensHealthDoors__wrapper--hide {
+    display: none
+}
+
+.mensHealthDoors__doorsWrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%
+}
+
+.mensHealthDoors__box {
+    position: relative;
+    z-index: 0;
+    padding: 20px
+}
+
+.mensHealthDoors__prizeWrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    height: 100px;
+    max-width: 150px;
+    box-shadow: 0 1px 2px 2px #7f7878
+}
+
+.mensHealthDoors__prize {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    color: red
+}
+
+.mensHealthDoors__imageWrapper {
+    border: 2px solid #000;
+    width: 100%;
+    height: fit-content;
+    max-width: 190px;
+    perspective: 500px
+}
+
+.mensHealthDoors__doorsImage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 2px #191919;
+    object-fit: contain;
+    transform-origin: 0 0;
+    transition: .5s transform linear;
+    cursor: pointer
+}
+
+.mensHealthDoors__doorsImage:hover {
+    transform: rotateY(-30deg)
+}
+
+.mensHealthDoors__doorsImage--open {
+    transform: rotateY(-90deg) !important
+}
+
+.mensHealthDoors__popUpWrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.mensHealthDoors__popUpWrapper--show {
+    display: flex
+}
+
+.mensHealthDoors__hiddenWrapper {
+    width: 100%;
+    max-width: 500px
+}
+
+.mensHealthDoors__popUpCloser {
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    height: fit-content;
+    max-width: 30px;
+    cursor: pointer
+}
+
+.mensHealthDoors__closeImage {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px #fff;
+    object-fit: contain
+}
+
+.mensHealthDoors__popUpContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 50px 20px 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff
+}
+
+.mensHealthDoors__popUpText, .mensHealthDoors__popUpTitle {
+    padding: 10px 0;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center
+}
+
+.mensHealthDoors__popUpText {
+    padding: 5px 0;
+    font-size: 16px
+}
+
+.mensHealthDoors__popUpLink {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 0;
+    border-radius: 5px;
+    padding: 10px 30px;
+    min-width: 180px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    background-color: #71c341;
+    cursor: pointer
+}
+
+.mensHealthDoors__offerWrapper {
+    width: 100%;
+    height: fit-content;
+    max-width: 220px
+}
+
+.mensHealthDoors__offerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+.mensHealthDoors__form {
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 40px;
+    padding: 20px 20px 5px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #fff;
+    animation: .6s ease 0s normal none 1 running form-appear
+}
+
+.mensHealthDoors__formImgWrapper {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    max-width: 215px
+}
+
+.mensHealthDoors__formImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+.mensHealthDoors__timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%
+}
+
+.mensHealthDoors__timer .countdownTimerBox {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 20px;
+    max-width: 10%
+}
+
+.mensHealthDoors__timer .countdownTimerBox .minutes, .mensHealthDoors__timer .countdownTimerBox .seconds {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 32px;
+    transition: .2s
+}
+
+.mensHealthDoors__timer .countdownTimerBox .minutesBox, .mensHealthDoors__timer .countdownTimerBox .secondsBox {
+    display: flex
+}
+
+.mensHealthDoors__timer .countdownTimerBox .timeBg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: unset;
+    height: unset;
+    line-height: 32px;
+    text-align: center;
+    color: red;
+    background: #fff
+}
+
+.mensHealthDoors__timer .countdownTimerBox .timeBg:nth-child(2n) {
+    margin-right: 0
+}
+
+.mensHealthDoors__timer .countdownTimerBox .ending {
+    display: block;
+    margin: 0 5px;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 32px;
+    text-align: center;
+    color: #000;
+    transition: .2s
+}
+
+.mensHealthDoors__formTitle {
+    margin: 10px 0 0;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    word-break: break-word;
+    color: #222
+}
+
+.mensHealthDoors__formSubTitle, .mensHealthDoors__formTitle--red {
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ca2d2d
+}
+
+.mensHealthDoors__formSubTitle {
+    margin: 10px 0 0;
+    font-size: 15px;
+    line-height: 25px;
+    word-break: break-word;
+    color: #222
+}
+
+.mensHealthDoors__formWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.mensHealthDoors__formBtn, .mensHealthDoors__formName, .mensHealthDoors__formPhone {
+    display: flex;
+    outline: 0;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    box-sizing: border-box;
+    font-style: normal;
+    line-height: 20px
+}
+
+.mensHealthDoors__formName, .mensHealthDoors__formPhone {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 7px 0;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 14px;
+    transition: .25s
+}
+
+.mensHealthDoors__formBtn {
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 0;
+    border: 0;
+    border-radius: 5px;
+    padding: 15px 35px;
+    box-shadow: 0 4px 3px #242120;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: red;
+    cursor: pointer
+}
+
+.mensHealthDoors__textFooter {
+    margin: 0;
+    padding: 5px 0 0;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: center
+}
+
+.mensHealthDoors__formBotText {
+    margin: 10px 0 0;
+    font-family: sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+    word-break: break-word;
+    text-align: center;
+    color: #888
+}
+
+.winPopupBgMensHealthDoors {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5)
+}
+
+.winPopupMensHealthDoors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 70px 10px 20px;
+    width: 100%;
+    max-width: 400px;
+    word-break: break-word;
+    text-align: center;
+    background: #fff 0 0;
+    animation: .6s ease 0s normal none 1 running pop-up-appear
+}
+
+.winPopupMensHealthDoors__iconWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 110px;
+    max-height: 110px
+}
+
+.winPopupMensHealthDoors__iconRound--white {
+    position: absolute;
+    left: 0;
+    top: -123px;
+    border: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    background: #71c341;
+    transition: opacity 1s ease 0s;
+    animation: .5s ease .6s normal backwards 1 running pop-up-appear-after
+}
+
+.winPopupMensHealthDoors__iconWrapperClose {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.winPopupMensHealthDoors__closeBtn {
+    position: absolute;
+    right: -45px;
+    top: -107px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    box-shadow: #fff 0 0 10px 0;
+    cursor: pointer
+}
+
+.winPopupMensHealthDoors__text {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #333
+}
+
+.winPopupMensHealthDoors__text--title {
+    margin: 0 0 20px;
+    font-size: 40px;
+    line-height: 45px
+}
+
+.winPopupMensHealthDoors__btn {
+    margin: 25px auto 0;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20%;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #71c341;
+    cursor: pointer
+}
+
+.winPopupMensHealthDoors__text--red {
+    color: red
+}
+
+.winPopupBgMensHealthDoorsShow {
+    display: flex
+}
+
+.winPopupBgMensHealthDoorsEdit {
+    position: unset;
+    display: flex;
+    min-height: 50vh
+}
+
+.mensHealthDoorsFormShow {
+    display: flex
+}
+
+.mensHealthNav {
+    margin: 0 auto;
+    border-top: 1px solid #9f9d9d;
+    padding-bottom: 20px;
+    max-width: 600px
+}
+
+.mensHealthNav__itemsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.mensHealthNav__itemsWrapper ul {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #9f9d9d;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0
+}
+
+.mensHealthNav__itemsWrapper ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px
+}
+
+.mensHealthNav__menuImgItem {
+    margin-bottom: 5px;
+    width: 100%;
+    height: 100%;
+    max-width: 20px;
+    max-height: 20px
+}
+
+.mensHealthNav__menuText {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center
+}
+
+.mensHealthNav__searchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #9f9d9d;
+    padding-top: 22px;
+    max-width: 165px
+}
+
+.mensHealthNav__searchWrapper::after {
+    content: url("../img/search482.svg");
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    width: 20px;
+    height: 20px
+}
+
+.mensHealthNav__searchInput {
+    outline: 0;
+    border: 0;
+    padding: 5px 15px
+}
+
+.mensHealthNavLogo__navWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 500px
+}
+
+.mensHealthNavLogo__logoWrapper {
+    width: 100%;
+    max-width: 330px
+}
+
+.mensHealthNavLogo__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.mensHealthNavLogo__logoDescription {
+    margin-top: 10px;
+    padding-bottom: 5px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1
+}
+
+.mensHealthText {
+    width: 100%
+}
+
+.mensHealthText__footerBtnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+    padding: 0 10px;
+    text-align: center
+}
+
+.mensHealthText ul, .mensHealthText__simpleText ul {
+    padding-left: 12px
+}
+
+.mensHealthText ul li, .mensHealthText__simpleText ul li {
+    padding: 0 0 11px
+}
+
+.mensHealthText__simpleText {
+    padding: 0 15px 11px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px
+}
+
+.mensHealthText__simpleText--footerBtn {
+    display: inline-block;
+    border: 0;
+    border-radius: 2.5px;
+    padding: 0 25px;
+    box-shadow: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 50px;
+    color: #fff;
+    background: #e6373a
+}
+
+.mensHealthText__simpleText--commentsTitle {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #03658c
+}
+
+.mensHealthText__simpleText--bold, .mensHealthText__simpleText--boldLink {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--bordered {
+    margin: 0 15px;
+    border: 2px solid red;
+    padding: 10px
+}
+
+.mensHealthText__simpleText--underImage {
+    padding-bottom: 30px;
+    font-style: italic;
+    font-size: 14px;
+    text-align: center
+}
+
+.mensHealthText a.mensHealthText__simpleText--footerBtn:hover {
+    background-color: #d9292d
+}
+
+.mensHealthText a.mensHealthText__simpleText--boldLink {
+    text-decoration: underline;
+    color: #00e
+}
+
+.mensHealthText a.mensHealthText__simpleText--boldLink:hover {
+    text-decoration: none
+}
+
+.mensHealthText__mainTitle {
+    padding: 10px 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 35px;
+    color: #dd252a
+}
+
+.mensHealthAside__newsText--198933, .mensHealthAside__newsText--251091, .mensHealthAside__newsText--478598 {
+    font-size: 16px;
+    line-height: 20.8px;
+    font-weight: 700
+}
+
+.mensHealthText__mainTitle--408756, .mensHealthText__simpleText--647624 {
+    font-weight: 700
+}
+
+.mensHealthContentImg__imgWrapper--679546 {
+    max-width: 700px;
+}
+
+.mensHealthContentImg__imgItem--179711 {
+    height: 100%
+}
+
+.mensHealthText__simpleText--465627, .mensHealthText__simpleText--831380 {
+    font-style: oblique;
+    font-weight: 700;
+    text-align: center
+}
+
+.mensHealthText__simpleText--831380 {
+    font-size: 19px;
+    line-height: 24.7px
+}
+
+.mensHealthText__simpleText--185101 {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 700;
+    color: #ff0004
+}
+
+.mensHealthText--880101, .mensHealthText__simpleText--690326 {
+    font-weight: 700
+}
+
+.mensHealthContentImg__imgWrapper--569389 {
+    max-width: 700px
+}
+
+.mensHealthContentImg__imgItem--899940 {
+    height: 100%
+}
+
+.mensHealthText--725656 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--367800 {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 700;
+    color: #ff0004
+}
+
+.mensHealthText--339782, .mensHealthText--966868 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--378498 {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 700;
+    color: #ff0004
+}
+
+.mensHealthContentImg__imgWrapper--207288 {
+    max-width: 700px
+}
+
+.mensHealthContentImg__imgItem--238506 {
+    height: 100%
+}
+
+.mensHealthText--666647, .mensHealthText__simpleText--341355 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--759026 {
+    background-color: #fdffd0;
+    font-style: oblique;
+    border: 2px solid #000
+}
+
+.mensHealthText--892807 {
+    font-weight: 700
+}
+
+.mensHealthContentImg__imgWrapper--942005 {
+    max-width: 700px
+}
+
+.mensHealthContentImg__imgItem--372025 {
+    height: 100%
+}
+
+.mensHealthText__simpleText--650028 {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--158720 {
+    font-weight: 700
+}
+
+.mensHealthText--652927 {
+    font-weight: 400
+}
+
+.mensHealthText--946982 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--125700 {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 700;
+    color: #891214
+}
+
+.mensHealthContentImg__imgWrapper--889769 {
+    max-width: 700px
+}
+
+.mensHealthContentImg__imgItem--853816 {
+    height: 100%
+}
+
+.mensHealthText__simpleText--660813 {
+    font-size: 24px;
+    line-height: 31.2px;
+    color: #7f0b12
+}
+
+.mensHealthContentImg__imgWrapper--175095 {
+    max-width: 700px
+}
+
+.mensHealthContentImg__imgItem--630641 {
+    height: 100%
+}
+
+.mensHealthText__simpleText--315333 {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 700;
+    color: #6c1011
+}
+
+.mensHealthContentImg__imgWrapper--606526 {
+    max-width: 700px
+}
+
+.mensHealthContentImg__imgItem--505032 {
+    height: 100%
+}
+
+.mensHealthText__simpleText--900844 {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 700;
+    color: #731516
+}
+
+.mensHealthText--203732 {
+    color: #900b0c;
+    text-decoration-line: underline;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.mensHealthContentImg__imgWrapper--913836 {
+    max-width: 500px
+}
+
+.mensHealthContentImg__imgItem--103814 {
+    height: 100%
+}
+
+.mensHealthText--779283 {
+    color: #811a1b;
+    text-decoration-line: underline;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--715710 {
+    background-color: #fffed2;
+    border: 2px solid #000
+}
+
+.mensHealthText--134344 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--530071 {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 700;
+    color: #ff0023
+}
+
+.mensHealthText--598038 {
+    color: #7d1314;
+    text-decoration-line: underline;
+    cursor: pointer
+}
+
+.mensHealthText--225675, .mensHealthText--474193, .mensHealthText--611374, .mensHealthText--724779, .mensHealthText--847146 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--193586 {
+    background-color: #fffed2;
+    border: 2px solid #000
+}
+
+.mensHealthText--775505 {
+    color: #820f11;
+    text-decoration-line: underline;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.mensHealthText--188551, .mensHealthText--561068 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--518116 {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--626782, .mensHealthText__simpleText--830286 {
+    font-weight: 700
+}
+
+.mensHealthText--532300, .mensHealthText__simpleText--508233 {
+    font-weight: 400
+}
+
+.mensHealthText--229412 {
+    color: #8c1122;
+    text-decoration-line: underline;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.mensHealthText--894111 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--518424 {
+    font-weight: 700;
+    color: #ff0004;
+    text-align: center
+}
+
+.mensHealthText__simpleText--803457 {
+    font-weight: 400
+}
+
+.mensHealthText--581826 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--488452 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31.2px;
+    color: #ff0004
+}
+
+.coloredText__listItem--500670 {
+    font-weight: 400
+}
+
+.coloredText--769202 {
+    font-weight: 700
+}
+
+.coloredText--977106 {
+    color: #870d0f;
+    text-decoration-line: underline;
+    cursor: pointer
+}
+
+.mensHealthText__simpleText--261274 {
+    font-weight: 400;
+    background-color: #e0ffe6;
+    border: 2px solid #ff0004
+}
+
+.mensHealthText--841273 {
+    font-weight: 700
+}
+
+.mensHealthText--210558 {
+    font-weight: 700;
+    color: #ff0004
+}
+
+.mensHealthText--139598, .mensHealthText--842647 {
+    font-weight: 700
+}
+
+.mensHealthText__simpleText--224671 {
+    font-size: 24px;
+    line-height: 31.2px;
+    color: #000
+}
+
+.commentImgWrapper--633954 {
+    max-width: 400px;
+    width: 100%;
+    height: fit-content
+}
+
+.commentImg--510434 {
+    width: 100%;
+    object-fit: contain
+}
+
+.commentImgWrapper--644363 {
+    max-width: 400px;
+    width: 100%;
+    height: fit-content
+}
+
+.commentImg--277186 {
+    width: 100%;
+    object-fit: contain
+}
+
+.commentBox--392337 {
+    color: #57080a;
+    text-decoration-line: underline;
+    cursor: pointer
+}
+
+.commentImgWrapper--513491 {
+    max-width: 400px;
+    width: 100%;
+    height: fit-content
+}
+
+.commentImg--905320 {
+    width: 100%;
+    object-fit: contain
+}
+
+.commentBox--890608 {
+    color: #73181a;
+    text-decoration-line: underline;
+    cursor: pointer
+}
+
+.commentImgWrapper--303117 {
+    max-width: 400px;
+    width: 100%;
+    height: fit-content
+}
+
+.commentImg--256102 {
+    width: 100%;
+    object-fit: contain
+}
+
+.commentBox--196665, .commentBox--234413, .commentBox--728945 {
+    color: #971e20;
+    text-decoration-line: underline;
+    cursor: pointer
+}
+
+.commentBox--196665, .commentBox--234413 {
+    color: #a13435
+}
+
+.commentBox--196665 {
+    color: #651213
+}
+
+.commentImgWrapper--730479 {
+    max-width: 400px;
+    width: 100%;
+    height: fit-content
+}
+
+.commentImg--753158 {
+    width: 100%;
+    object-fit: contain
+}
+
+.commentBox--280654 {
+    color: #811618;
+    text-decoration-line: underline;
+    cursor: pointer
+}
+
+.commentImgWrapper--860399 {
+    max-width: 400px;
+    width: 100%;
+    height: fit-content
+}
+
+.commentImg--910638 {
+    width: 100%;
+    object-fit: contain
+}
+
+.commentBox--532986 {
+    color: #7b191a;
+    text-decoration-line: underline;
+    cursor: pointer
+}
+
+@media (max-width: 1024px) {
+    .mensHealthAside {
+        display: none
+    }
+
+    .mensHealthContentImg, .mensHealthDoors, .mensHealthText {
+        width: 100%
+    }
+}
+
+@media (max-width: 959px) {
+    .mensHealthDoors__timer .countdownTimerBox .minutes, .mensHealthDoors__timer .countdownTimerBox .seconds {
+        font-size: 17px
+    }
+
+    .mensHealthDoors__timer .countdownTimerBox .timeBg {
+        width: unset;
+        height: unset;
+        line-height: 32px
+    }
+
+    .mensHealthDoors__timer .countdownTimerBox .ending {
+        font-size: 17px;
+        line-height: 32px;
+        letter-spacing: 0
+    }
+}
+
+@media (max-width: 768px) {
+    .winPopupMensHealthDoors__iconRound--white {
+        left: 5px;
+        width: 95px;
+        height: 95px
+    }
+
+    .mensHealthNav__itemsWrapper {
+        display: none
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .textMedia {
+        padding: 5px
+    }
+
+    .textHeightMedia {
+        line-height: normal
+    }
+
+    .textLetterMedia {
+        letter-spacing: normal
+    }
+}
+
+@media (max-width: 767px) {
+    .menHealthCom__wrapper {
+        padding: 10px
+    }
+
+    .menHealthCom {
+        padding-bottom: 10px
+    }
+
+    .mensHealthDoors__box {
+        padding: 10px
+    }
+
+    .mensHealthDoors__prizeWrapper {
+        border-radius: 50%;
+        height: fit-content;
+        max-width: 65px
+    }
+
+    .mensHealthDoors__prize {
+        font-size: 20px
+    }
+
+    .mensHealthDoors__imageWrapper {
+        max-width: 95px
+    }
+
+    .mensHealthDoors__formImgWrapper {
+        max-width: 179px
+    }
+
+    .winPopupMensHealthDoors__closeBtn {
+        right: -5px
+    }
+}
+
+@media (max-width: 575px) {
+    .mensHealthDoors__form {
+        padding: 15px
+    }
+}
+
+@media (max-width: 500px) {
+    .iti__country-list {
+        white-space: normal
+    }
+
+    .mensHealthText__mainTitle {
+        font-size: 25px
+    }
+
+    .mensHealthText__simpleText {
+        font-size: 16px
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+    .iti__flag {
+        background-size: 5652px 15px;
+        background-image: url("")
+    }
+}
+
+.ring-loading {
+    animation: loadingD 1.5s .3s cubic-bezier(.17, .37, .43, .67) infinite;
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    padding: 15px !important;
+    border: 7px dashed #000;
+    border-radius: 100%;
+    display: none;
+    margin: 10px auto !important
+}
+
+@keyframes loadingD {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+@media (max-width: ) {
+    
+}
